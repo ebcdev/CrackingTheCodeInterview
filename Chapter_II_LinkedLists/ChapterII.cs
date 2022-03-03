@@ -31,7 +31,33 @@ ListFactory<int>.PrintList(partitionLinkedList,"Before partitioning");
 linkedLists.Partition(partitionLinkedList,5);
 ListFactory<int>.PrintList(partitionLinkedList,"After partitioning");
 
+/*2.5*/
+var aArray=new int[]{7,1,6};
+var bArray=new int[]{5,9,2};
 
+Node<int> a=ListFactory<int>.CreateLinkedList(aArray);
+Node<int> b=ListFactory<int>.CreateLinkedList(bArray);
+
+ListFactory<int>.PrintList(a,"Adding a:");
+ListFactory<int>.PrintList(b,"to b:");
+
+Node<int> result=linkedLists.Sum(a,b);
+
+ListFactory<int>.PrintList(result,"Result of a+b");
+
+
+aArray=new int[]{6,1,7};
+bArray=new int[]{9,5};
+
+a=ListFactory<int>.CreateLinkedList(aArray);
+b=ListFactory<int>.CreateLinkedList(bArray);
+
+ListFactory<int>.PrintList(a,"Adding a in order:");
+ListFactory<int>.PrintList(b,"to b:");
+
+result=linkedLists.SumInOrder(a,b);
+
+ListFactory<int>.PrintList(result,"Result of a+b in order");
 
 public class ChapterIILinkedLists{
 
@@ -132,6 +158,78 @@ public class ChapterIILinkedLists{
             pointer=insertion;
         }
     }
+
+
+    public Node<int> Sum(Node<int> a, Node<int> b){
+        Node<int> result = default;
+        Node<int> resultPointer=result;
+        Node<int> pointerA=a;
+        Node<int> pointerB=b;
+        int carry,tempA,tempB;
+        carry=tempA=tempB=0;
+        while(pointerA!=null||pointerB!=null||carry!=0){
+            tempA=pointerA!=null?pointerA.Value:0;
+            tempB=pointerB!=null?pointerB.Value:0;
+
+            tempA+=tempB+carry;
+
+            carry=tempA/10;
+            tempA=tempA%10;
+            if(result==null){
+                result=new Node<int>{Value=tempA};
+                resultPointer=result;
+            }else{
+                resultPointer.Next=new Node<int>{Value=tempA};
+                resultPointer=resultPointer.Next;
+            }
+            pointerA=pointerA.Next;
+            pointerB=pointerB.Next;
+        }
+        return result;    
+
+    }
+
+    public Node<int> SumInOrder(Node<int> a, Node<int> b){
+        Node<int> result=default;
+        Node<int> tempResult;
+        Node<int> pointerA=a;
+        Node<int> pointerB=b;
+        int carry,tempA,tempB;
+        carry=tempA=tempB=0;
+        Stack<int> temp=new Stack<int>();
+        
+        int lenghtA=pointerA.GetLength();
+        int lenghtB=pointerB.GetLength();
+        int difference=Math.Abs(lenghtA-lenghtB);
+
+        if(difference>0){
+            if(lenghtA>lenghtB){
+                pointerB=pointerB.Pad(difference,0);
+            }else{
+                pointerA=pointerA.Pad(difference,0);
+            }
+        }       
+        
+        while(pointerA!=null||pointerB!=null){
+            tempA=(pointerA==null)?0:pointerA.Value;
+            tempB=(pointerB==null)?0:pointerB.Value;
+            tempA+=tempB;
+            temp.Push(tempA);
+            pointerA=pointerA.Next;
+            pointerB=pointerB.Next;
+        }
+        while(temp.Count>0||carry!=0){
+            tempA=(temp.Count>0)?temp.Pop():0;
+            tempA+=carry;
+            carry=tempA/10;
+            tempA=tempA%10;
+            tempResult=new Node<int>{Value=tempA,Next=result};
+            result=tempResult;
+        }
+        return result;
+    }
+
+    
     
 
 }
@@ -141,6 +239,25 @@ public class Node<T>{
     public T Value { get; set; }
     public Node<T>? Next { get; set; }
 
+    public int GetLength(){
+        int counter=1;
+        Node<T> next=Next;
+        while(next!=null){
+            counter++;
+            next=next.Next;
+        }
+        return counter;
+    }
+
+    public Node<T> Pad(int number,T value){
+        Node<T> node=this;
+        while(number>0){
+           var temp=new Node<T>{Value=value,Next=node};
+           node=temp;            
+           number--; 
+        }
+        return node;
+    }
     
 }
 
