@@ -2,8 +2,10 @@
 
     public static void Main(string [] args){
         ChapterIII excercises=new ChapterIII();
-        excercises.Excercise1();
-        excercises.Excercise2();
+        /*excercises.Excercise1();
+        excercises.Excercise2();*/
+        excercises.Excercise3();
+    
     }
 
     public void Excercise1(){
@@ -55,5 +57,10 @@
             Console.WriteLine($"Popped {stack.Pop()}");
             Console.WriteLine($"Current Min={stack.GetMinimum()}");
         }        
+    }
+
+    public void Excercise3(){
+        StackOfPlates plates=new StackOfPlates();
+        plates.Run();
     }
 }
