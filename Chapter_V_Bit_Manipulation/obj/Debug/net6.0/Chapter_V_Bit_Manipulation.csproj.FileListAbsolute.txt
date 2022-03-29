@@ -1,0 +1,15 @@
+/Users/enrique/code/src/cracking_the_code_interview/Chapter_V_Bit_Manipulation/bin/Debug/net6.0/Chapter_V_Bit_Manipulation
+/Users/enrique/code/src/cracking_the_code_interview/Chapter_V_Bit_Manipulation/bin/Debug/net6.0/Chapter_V_Bit_Manipulation.deps.json
+/Users/enrique/code/src/cracking_the_code_interview/Chapter_V_Bit_Manipulation/bin/Debug/net6.0/Chapter_V_Bit_Manipulation.runtimeconfig.json
+/Users/enrique/code/src/cracking_the_code_interview/Chapter_V_Bit_Manipulation/bin/Debug/net6.0/Chapter_V_Bit_Manipulation.dll
+/Users/enrique/code/src/cracking_the_code_interview/Chapter_V_Bit_Manipulation/bin/Debug/net6.0/ref/Chapter_V_Bit_Manipulation.dll
+/Users/enrique/code/src/cracking_the_code_interview/Chapter_V_Bit_Manipulation/bin/Debug/net6.0/Chapter_V_Bit_Manipulation.pdb
+/Users/enrique/code/src/cracking_the_code_interview/Chapter_V_Bit_Manipulation/obj/Debug/net6.0/Chapter_V_Bit_Manipulation.csproj.AssemblyReference.cache
+/Users/enrique/code/src/cracking_the_code_interview/Chapter_V_Bit_Manipulation/obj/Debug/net6.0/Chapter_V_Bit_Manipulation.GeneratedMSBuildEditorConfig.editorconfig
+/Users/enrique/code/src/cracking_the_code_interview/Chapter_V_Bit_Manipulation/obj/Debug/net6.0/Chapter_V_Bit_Manipulation.AssemblyInfoInputs.cache
+/Users/enrique/code/src/cracking_the_code_interview/Chapter_V_Bit_Manipulation/obj/Debug/net6.0/Chapter_V_Bit_Manipulation.AssemblyInfo.cs
+/Users/enrique/code/src/cracking_the_code_interview/Chapter_V_Bit_Manipulation/obj/Debug/net6.0/Chapter_V_Bit_Manipulation.csproj.CoreCompileInputs.cache
+/Users/enrique/code/src/cracking_the_code_interview/Chapter_V_Bit_Manipulation/obj/Debug/net6.0/Chapter_V_Bit_Manipulation.dll
+/Users/enrique/code/src/cracking_the_code_interview/Chapter_V_Bit_Manipulation/obj/Debug/net6.0/ref/Chapter_V_Bit_Manipulation.dll
+/Users/enrique/code/src/cracking_the_code_interview/Chapter_V_Bit_Manipulation/obj/Debug/net6.0/Chapter_V_Bit_Manipulation.pdb
+/Users/enrique/code/src/cracking_the_code_interview/Chapter_V_Bit_Manipulation/obj/Debug/net6.0/Chapter_V_Bit_Manipulation.genruntimeconfig.cache
