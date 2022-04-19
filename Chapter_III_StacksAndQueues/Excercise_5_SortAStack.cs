@@ -32,11 +32,9 @@ public class Excercise_5_SortAStack : IExcercise
          temp=new Stack<int>();
      }
      public void Push(int value){
-         while(stack.Count>0&&stack.Peek()<value){  
-                        
+         while(stack.Count>0&&stack.Peek()<value){                          
              Console.WriteLine($"Popping {stack.Peek()} to temp stack");
-             temp.Push(stack.Pop());
-             
+             temp.Push(stack.Pop());             
          }
          Console.WriteLine($"Pushing {value} to main stack");
          stack.Push(value);

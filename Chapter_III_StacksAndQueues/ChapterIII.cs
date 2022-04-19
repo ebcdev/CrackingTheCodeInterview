@@ -5,8 +5,9 @@
       /*  excercises.Excercise1();
         excercises.Excercise2();
         excercises.Excercise3();
-        excercises.Excercise4();*/
-        excercises.Excercise5();
+        excercises.Excercise4();
+        excercises.Excercise5();*/
+        excercises.Excercise6();
     
     }
 
@@ -74,5 +75,10 @@
     public void Excercise5(){
         Excercise_5_SortAStack stack=new Excercise_5_SortAStack();
         stack.Run();
+    }
+
+    public void Excercise6(){
+        AnimalShelter shelter=new AnimalShelter();
+        shelter.Run();
     }
 }
